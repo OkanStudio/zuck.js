@@ -1398,6 +1398,11 @@ module.exports = (window => {
           parseStory(story);
         });
       }
+      
+      if (timeline && timeline.querySelector('.items')) {
+        each(timeline.querySelectorAll('.items'), (i, item) => {
+          parseItems(item);
+      });
 
       if (option('backNative')) {
         if (window.location.hash === `#!${id}`) {
